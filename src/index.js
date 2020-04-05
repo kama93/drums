@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Complete from './Complete.js'
+import 'tachyons';
 import * as serviceWorker from './serviceWorker';
+import arrowSquares from './arrowSquares.js'
+
+document.addEventListener("keydown", event => {
+    let square = arrowSquares.filter(square => square.letter === event.key.toUpperCase())
+
+    if (square.length===1){
+        square[0].music.play()
+    }
+});
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Complete />,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();

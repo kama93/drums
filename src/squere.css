@@ -1,0 +1,16 @@
+.mb2{
+    margin: 0.5rem;
+    border-color: black;
+
+}
+button{
+    background-color: rgba(0,0,0,0.5);
+    width: 6.5rem;
+    height: 6.5rem;
+}
+h1{
+    color: white;
+}
+p{
+    color: yellow;
+}
