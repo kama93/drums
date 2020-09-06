@@ -15,11 +15,6 @@ const Complete= ()=>
                     name={arrowSquare.name}
                     music={arrowSquare.music}/>))}
         </div>
-        <div className='butRec' >
-            <button className="buttonRecord" >
-                <h1 className='buttonFont'>Record</h1>
-            </button>
-        </div>
     </element>)
 };
 
