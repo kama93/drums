@@ -1,0 +1,10 @@
+language: generic
+
+services:
+  - docker
+
+script:
+- docker build -t kama93/drums:latest .
+- docker images
+- echo "$DOCKER_TOKEN" | docker login -u kama93 --password-stdin
+- docker push kama93/drums:latest
